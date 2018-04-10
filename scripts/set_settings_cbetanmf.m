@@ -9,9 +9,9 @@ hop = Nw/4;
 wtype = 'hann';
 
 % Paths
-dataset_path = 'datasets/DSD100/';
-audio_path = 'complex-beta-nmf/audio_files/';
-metrics_path = 'complex-beta-nmf/metrics/';
+dataset_path = 'dataset/';
+audio_path = 'audio_files/';
+metrics_path = 'metrics/';
 
 % Data
 Nsongs = 50;
