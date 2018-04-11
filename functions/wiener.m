@@ -7,7 +7,7 @@
 % Outputs :
 %     C : complex rank-1 separated components
 
-function [C] = wiener(X,W,H)
+function [C] = wiener_nmf(X,W,H)
 
 F = size(X,1);
 [K,T] = size(H);
