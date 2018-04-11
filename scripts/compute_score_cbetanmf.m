@@ -32,5 +32,13 @@ li = squeeze(isnan(score(1,1,1,:)));
 score(:,:,:,li) = [];
 save(strcat(metrics_path,'bss_complex-beta-nmf.mat'),'score');
 
-wo = mean(score,4);
-squeeze(wo(1,:,:))'
+% Plot the results
+SDR = squeeze(mean(score(:,1,:,:),1));
+SIR = squeeze(mean(score(:,2,:,:),1));
+SAR = squeeze(mean(score(:,3,:,:),1));
+
+figure;
+algos_labels = {'NMF','Complex EuNMF','Complex ISNMF','Complex betaNMF'};
+subplot(1,3,1); boxplot(SDR','orientation','horizontal'); title('SDR (dB)', 'fontsize', 16); set(gca,'Yticklabel',algos_labels);
+subplot(1,3,2); boxplot(SIR','orientation','horizontal'); title('SIR (dB)', 'fontsize', 16); set(gca,'Yticklabel',[]);
+subplot(1,3,3); boxplot(SAR','orientation','horizontal'); title('SAR (dB)', 'fontsize', 16); set(gca,'Yticklabel',[]);
