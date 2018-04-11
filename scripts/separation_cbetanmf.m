@@ -42,7 +42,7 @@ for ind=1:Nsongs
      
     % NMF
     fprintf('NMF \n');
-    [~,H] = NMF(V,W_matrix,Hini_matrix,iter_nmf,beta_nmf,0,0,ones(F,T),0); aux =  wiener(X,W_matrix,H);
+    [~,H] = NMF(V,W_matrix,Hini_matrix,iter_nmf,beta_nmf,0,0,ones(F,T),0); aux =  wiener_nmf(X,W_matrix,H);
     Se(:,:,1,1) = sum(aux(:,:,1:K),3); Se(:,:,2,1) = sum(aux(:,:,K+1:end),3);
     
     % Complex EuNMF
