@@ -29,4 +29,4 @@ iter_nmf = 100;
 % Parameters
 kappa = 1;
 beta_cnmf = 0.5;
-beta_nmf = 0.75;
+beta_nmf = 0.5;
