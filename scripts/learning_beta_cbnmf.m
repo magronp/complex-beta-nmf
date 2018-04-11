@@ -48,7 +48,7 @@ for ind=1:Nsongs
         % NMF
         Se = zeros(F,T,J);
         [~,H] = NMF(abs(V),W_matrix,Hini_matrix,iter_nmf,beta,0,0,ones(F,T),0);
-        aux =  wiener(X,W_matrix,H);
+        aux =  wiener_nmf(X,W_matrix,H);
         Se(:,:,1) = sum(aux(:,:,1:K),3); Se(:,:,2) = sum(aux(:,:,K+1:end),3);
         se = real(iSTFT(Se,Nfft,hop,Nw,wtype));
         [sdr,sir,sar] = GetSDR(se,sm);
