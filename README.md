@@ -4,7 +4,7 @@ Code for complex NMF with the beta-divergence
 
 Here, you will find the code related to complex NMF with the beta-divergence. It is applied to the task of harmonic/percussive source separation.
 
-If you use any of the things existing in this repository, please cite the [corresponding paper](https://hal.archives-ouvertes.fr/hal-01741278). 
+If you use any of the things existing in this repository, please cite the [corresponding paper](https://hal.archives-ouvertes.fr/hal-01779664). 
 
 
 ### Dataset set-up
