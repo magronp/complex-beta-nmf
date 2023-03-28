@@ -1,4 +1,4 @@
-# Complex NMF with the beta-divergence GitHub repository
+# Complex NMF with the beta-divergence
 
 Code for complex NMF with the beta-divergence
 
